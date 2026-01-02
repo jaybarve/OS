@@ -27,37 +27,89 @@
 
   <div class="video-overlay glass">
     <h1>Installation process.</h1>
-    <p>Simple. Clear. Step by step.</p>
+    <p>Every step explained. No risk. No confusion.</p>
   </div>
 </section>
 
 <!-- DESKTOP PROCESS -->
 <section class="tools">
 
-  <h2 class="section-title">Desktop installation flow</h2>
+  <h2 class="section-title">Desktop OS installation process</h2>
 
   <div class="tool glass">
     <div class="pill-icon">1️⃣</div>
-    <h3>Download the tool</h3>
-    <p>Download the official Windows or Linux installation tool from this website.</p>
+    <h3>Check system requirements</h3>
+    <p>
+      Before installing Windows or Linux, verify that your system meets the
+      minimum requirements such as processor type, RAM, storage space,
+      and UEFI or Legacy BIOS support.
+    </p>
+    <p class="note">
+      ⚠️ Installing an OS on unsupported hardware may cause boot failure or data loss.
+    </p>
   </div>
 
   <div class="tool glass">
     <div class="pill-icon">2️⃣</div>
-    <h3>Create bootable USB</h3>
-    <p>Use Rufus, Ventoy, or Balena Etcher to create a bootable USB drive.</p>
+    <h3>Backup important data</h3>
+    <p>
+      Copy all important files like documents, photos, and projects to an
+      external drive or cloud storage. OS installation may erase existing data.
+    </p>
+    <p class="note">
+      ✅ This step is mandatory for safety.
+    </p>
   </div>
 
   <div class="tool glass">
     <div class="pill-icon">3️⃣</div>
-    <h3>Boot from USB</h3>
-    <p>Restart your computer and boot using the USB from BIOS or boot menu.</p>
+    <h3>Download official ISO file</h3>
+    <p>
+      Download the official Windows ISO from Microsoft or Linux ISO from the
+      respective Linux distribution website. Avoid third-party or modified ISOs.
+    </p>
   </div>
 
   <div class="tool glass">
     <div class="pill-icon">4️⃣</div>
-    <h3>Install OS</h3>
-    <p>Follow on-screen instructions to install Windows or Linux safely.</p>
+    <h3>Create bootable USB</h3>
+    <p>
+      Use tools like Rufus, Ventoy, or Balena Etcher to write the ISO file
+      to a USB drive (minimum 8GB recommended).
+    </p>
+    <p class="note">
+      💡 Select correct partition scheme (GPT/MBR) based on BIOS mode.
+    </p>
+  </div>
+
+  <div class="tool glass">
+    <div class="pill-icon">5️⃣</div>
+    <h3>Boot from USB</h3>
+    <p>
+      Restart the system and enter the Boot Menu (F12, F11, ESC, or DEL).
+      Select the USB drive as the boot device.
+    </p>
+  </div>
+
+  <div class="tool glass">
+    <div class="pill-icon">6️⃣</div>
+    <h3>Install the operating system</h3>
+    <p>
+      Follow on-screen installation steps. Choose language, region,
+      disk partition, and installation type carefully.
+    </p>
+    <p class="note">
+      ⚠️ Formatting the wrong drive will permanently delete data.
+    </p>
+  </div>
+
+  <div class="tool glass">
+    <div class="pill-icon">7️⃣</div>
+    <h3>Post-installation setup</h3>
+    <p>
+      After installation, install drivers, system updates, and security patches.
+      Configure firewall, antivirus, and system preferences.
+    </p>
   </div>
 
 </section>
@@ -65,35 +117,89 @@
 <!-- MOBILE PROCESS -->
 <section class="tools">
 
-  <h2 class="section-title">Mobile installation flow</h2>
+  <h2 class="section-title">Mobile OS / firmware installation process</h2>
 
   <div class="tool glass">
     <div class="pill-icon">1️⃣</div>
-    <h3>Unlock & prepare</h3>
-    <p>Enable USB debugging, unlock bootloader (if required), and install drivers.</p>
+    <h3>Understand risks</h3>
+    <p>
+      Flashing mobile firmware can permanently damage your device if done incorrectly.
+      Warranty may be void. Proceed only if you understand the process.
+    </p>
+    <p class="note">
+      ⚠️ This process is recommended for advanced users.
+    </p>
   </div>
 
   <div class="tool glass">
     <div class="pill-icon">2️⃣</div>
-    <h3>Download firmware</h3>
-    <p>Download official firmware or ROM for your Samsung, Xiaomi, or Nothing device.</p>
+    <h3>Backup device data</h3>
+    <p>
+      Backup contacts, photos, apps, and important files.
+      Flashing firmware usually wipes all internal storage.
+    </p>
   </div>
 
   <div class="tool glass">
     <div class="pill-icon">3️⃣</div>
-    <h3>Flash OS</h3>
-    <p>Use Odin, Mi Flash Tool, or official Nothing installer to flash the OS.</p>
+    <h3>Enable developer options</h3>
+    <p>
+      Enable Developer Options, USB Debugging, and OEM Unlock (if available)
+      from device settings.
+    </p>
   </div>
 
   <div class="tool glass">
     <div class="pill-icon">4️⃣</div>
-    <h3>Reboot & setup</h3>
-    <p>Restart your device and complete the initial setup process.</p>
+    <h3>Install USB drivers</h3>
+    <p>
+      Install official USB drivers on your computer so the device can
+      communicate properly during flashing.
+    </p>
+  </div>
+
+  <div class="tool glass">
+    <div class="pill-icon">5️⃣</div>
+    <h3>Download correct firmware</h3>
+    <p>
+      Download firmware that exactly matches your device model and region.
+      Incorrect firmware can hard-brick the device.
+    </p>
+  </div>
+
+  <div class="tool glass">
+    <div class="pill-icon">6️⃣</div>
+    <h3>Boot into flash mode</h3>
+    <p>
+      Enter Download Mode, Fastboot Mode, or Recovery Mode
+      depending on device brand (Samsung, Xiaomi, Nothing).
+    </p>
+  </div>
+
+  <div class="tool glass">
+    <div class="pill-icon">7️⃣</div>
+    <h3>Flash the firmware</h3>
+    <p>
+      Use Odin, Mi Flash Tool, or official Nothing tools to flash the firmware.
+      Do not disconnect cable during the process.
+    </p>
+    <p class="note">
+      ⛔ Interrupting flashing can permanently brick the device.
+    </p>
+  </div>
+
+  <div class="tool glass">
+    <div class="pill-icon">8️⃣</div>
+    <h3>Reboot and verify</h3>
+    <p>
+      After flashing completes, reboot the device and complete initial setup.
+      Verify system version, IMEI, and network functionality.
+    </p>
   </div>
 
 </section>
 
-<footer>© 2026 OS Tools</footer>
+<footer>© 2026 OS Tools By Jay Barve</footer>
 
 </body>
 </html>
