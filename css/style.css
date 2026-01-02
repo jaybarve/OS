@@ -184,6 +184,12 @@ footer {
   position: relative;
   z-index: 10;
 }
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 40px;
+  text-align: center;
+}
 
 /* MOBILE HERO SIZE */
 @media (max-width: 768px) {
