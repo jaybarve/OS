@@ -197,3 +197,20 @@ footer {
     height: 70vh;
   }
 }
+.section-title {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.tool h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.note {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #6e6e73;
+}
