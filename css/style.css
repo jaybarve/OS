@@ -12,7 +12,7 @@ body {
   color: #1d1d1f;
 }
 
-/* GLASS EFFECT */
+/* GLASS */
 .glass {
   background: rgba(255,255,255,0.65);
   backdrop-filter: blur(24px) saturate(180%);
@@ -20,11 +20,11 @@ body {
   box-shadow: 0 20px 40px rgba(0,0,0,0.08);
 }
 
-/* NAVBAR */
+/* NAV */
 .nav {
   position: sticky;
   top: 0;
-  z-index: 20;
+  z-index: 50;
 }
 
 .nav-inner {
@@ -40,18 +40,16 @@ body {
 .nav a {
   margin-left: 24px;
   text-decoration: none;
-  color: #1d1d1f;
   font-size: 14px;
+  color: #1d1d1f;
 }
 
-/* VIDEO HERO */
+/* HERO */
 .video-hero {
   height: 100vh;
   position: relative;
   overflow: hidden;
-  animation: heroScroll linear both;
-  animation-timeline: scroll();
-  animation-range: 0vh 90vh;
+  z-index: 0;
 }
 
 .video-hero video {
@@ -65,7 +63,7 @@ body {
 
 .video-overlay {
   position: relative;
-  z-index: 2;
+  z-index: 1;
   max-width: 700px;
   height: 100%;
   margin: auto;
@@ -79,15 +77,13 @@ body {
   padding: 40px 60px;
 }
 
-.video-overlay h1 {
-  font-size: 56px;
-  font-weight: 600;
-}
-
-.video-overlay p {
-  font-size: 22px;
-  margin-top: 12px;
-  opacity: 0.85;
+/* DESKTOP-ONLY SCROLL EFFECT */
+@media (hover: hover) and (pointer: fine) {
+  .video-hero {
+    animation: heroScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0vh 90vh;
+  }
 }
 
 @keyframes heroScroll {
@@ -103,6 +99,8 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   gap: 24px;
+  position: relative;
+  z-index: 10;
 }
 
 .card {
@@ -122,7 +120,7 @@ body {
   width: 64px;
   height: 64px;
   border-radius: 999px;
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.75);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -135,6 +133,8 @@ body {
   max-width: 900px;
   margin: auto;
   padding: 90px 20px;
+  position: relative;
+  z-index: 10;
 }
 
 .tool {
@@ -153,7 +153,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* DOWNLOAD BUTTONS */
+/* DOWNLOAD BUTTON */
 .download-btn {
   display: inline-block;
   margin-right: 12px;
@@ -166,10 +166,11 @@ body {
   color: white;
   background: linear-gradient(180deg, #1a7cff, #0066dd);
   box-shadow: 0 6px 20px rgba(0,113,227,0.45);
+  touch-action: manipulation;
 }
 
 .download-btn.secondary {
-  background: rgba(255,255,255,0.75);
+  background: rgba(255,255,255,0.8);
   color: #1d1d1f;
   border: 1px solid rgba(255,255,255,0.5);
 }
@@ -180,4 +181,13 @@ footer {
   padding: 50px;
   color: #6e6e73;
   font-size: 14px;
+  position: relative;
+  z-index: 10;
+}
+
+/* MOBILE HERO SIZE */
+@media (max-width: 768px) {
+  .video-hero {
+    height: 70vh;
+  }
 }
