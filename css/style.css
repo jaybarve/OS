@@ -149,3 +149,25 @@ body.dark {
   .section-title { font-size: 24px; }
   .tool { padding: 24px; }
 }
+/* ===== CHANGE BLUE TO RED ===== */
+
+/* Primary buttons */
+.download-btn {
+  background: #ff3b3b; /* red */
+}
+
+/* Secondary buttons (optional slightly darker red) */
+.download-btn.secondary {
+  background: rgba(255, 59, 59, 0.15);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 59, 59, 0.3);
+}
+
+/* Any links inside content */
+a {
+  color: #ff4d4d;
+}
+
+a:hover {
+  color: #ff1f1f;
+}
