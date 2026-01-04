@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
 
+/* =====================
+   RESET & BASE
+===================== */
 * {
   margin: 0;
   padding: 0;
@@ -7,14 +10,16 @@
 }
 
 body.dark {
-  font-family: Inter, sans-serif;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, sans-serif;
   background: radial-gradient(circle at top, #15151c, #07070b);
   color: #e5e5ea;
 }
 
-/* GLASS */
+/* =====================
+   GLASS EFFECT
+===================== */
 .glass {
-  background: rgba(25,25,35,0.45);
+  background: rgba(25, 25, 35, 0.45);
   backdrop-filter: blur(30px) saturate(180%);
   -webkit-backdrop-filter: blur(30px) saturate(180%);
   border: 1px solid rgba(255,255,255,0.08);
@@ -22,12 +27,15 @@ body.dark {
   box-shadow: 0 30px 60px rgba(0,0,0,0.7);
 }
 
-/* NAV */
+/* =====================
+   NAVBAR
+===================== */
 .nav {
   position: sticky;
   top: 0;
   z-index: 10;
 }
+
 .nav-inner {
   max-width: 1100px;
   margin: 16px auto;
@@ -36,24 +44,34 @@ body.dark {
   justify-content: space-between;
   align-items: center;
 }
+
 .nav a {
-  color: #e5e5ea;
-  text-decoration: none;
   margin-left: 20px;
+  text-decoration: none;
+  color: #ff4d4d;
+  font-size: 14px;
 }
 
-/* HERO */
+.nav a:hover {
+  color: #ff1f1f;
+}
+
+/* =====================
+   VIDEO HERO
+===================== */
 .video-hero {
   height: 70vh;
   position: relative;
   overflow: hidden;
 }
+
 .video-hero video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   filter: brightness(0.55);
 }
+
 .video-overlay {
   position: absolute;
   inset: 0;
@@ -65,7 +83,9 @@ body.dark {
   padding: 40px;
 }
 
-/* CONTENT */
+/* =====================
+   LAYOUT
+===================== */
 .grid,
 .tools {
   max-width: 1000px;
@@ -75,7 +95,7 @@ body.dark {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 24px;
 }
 
@@ -101,22 +121,45 @@ body.dark {
   margin-bottom: 12px;
 }
 
-/* BUTTONS */
+.note {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* =====================
+   BUTTONS (RED THEME)
+===================== */
 .download-btn {
   display: inline-block;
   margin: 10px 10px 0 0;
   padding: 12px 28px;
   border-radius: 999px;
-  background: #3b8cff;
-  color: #fff;
+  background: #ff453a;
+  color: #ffffff;
   text-decoration: none;
+  font-size: 14px;
 }
 
 .download-btn.secondary {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 69, 58, 0.15);
+  color: #ff6b6b;
+  border: 1px solid rgba(255, 69, 58, 0.3);
 }
 
-/* FOOTER */
+/* =====================
+   LINKS
+===================== */
+a {
+  color: #ff4d4d;
+}
+
+a:hover {
+  color: #ff1f1f;
+}
+
+/* =====================
+   FOOTER
+===================== */
 .site-footer {
   background: #060608;
   padding: 60px 20px 30px;
@@ -126,125 +169,40 @@ body.dark {
   max-width: 1000px;
   margin: auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 30px;
+}
+
+.site-footer h3,
+.site-footer h4 {
+  margin-bottom: 10px;
 }
 
 .site-footer a {
   display: block;
-  color: #bcbcc2;
-  text-decoration: none;
   margin-top: 6px;
+  text-decoration: none;
+  color: #bcbcc2;
+}
+
+.site-footer a:hover {
+  color: #ffffff;
 }
 
 .footer-bottom {
   text-align: center;
   margin-top: 40px;
+  font-size: 13px;
   color: #8e8e93;
 }
 
-/* MOBILE */
-@media (max-width: 768px) {
-  .video-hero { height: 55vh; }
-  .section-title { font-size: 24px; }
-  .tool { padding: 24px; }
-}
-/* ===== CHANGE BLUE TO RED ===== */
-
-/* Primary buttons */
-.download-btn {
-  background: #ff3b3b; /* red */
-}
-
-/* Secondary buttons (optional slightly darker red) */
-.download-btn.secondary {
-  background: rgba(255, 59, 59, 0.15);
-  color: #ff6b6b;
-  border: 1px solid rgba(255, 59, 59, 0.3);
-}
-
-/* Any links inside content */
-a {
-  color: #ff4d4d;
-}
-
-a:hover {
-  color: #ff1f1f;
-}
-/* ===== PRELOADER ===== */
-
-#preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: radial-gradient(circle at center, #15151c, #050507);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Glass box */
-.loader-glass {
-  background: rgba(25, 25, 35, 0.45);
-  backdrop-filter: blur(30px) saturate(180%);
-  -webkit-backdrop-filter: blur(30px) saturate(180%);
-  border: 1px solid rgba(255,255,255,0.08);
-  border-radius: 28px;
-  padding: 50px 60px;
-  text-align: center;
-  box-shadow: 0 40px 80px rgba(0,0,0,0.7);
-}
-
-/* Spinner */
-.spinner {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  border: 3px solid rgba(255,255,255,0.15);
-  border-top-color: #ff453a; /* red accent */
-  margin: 0 auto 20px;
-  animation: spin 1s linear infinite;
-}
-
-@keyframes spin {
-  to { transform: rotate(360deg); }
-}
-
-.loader-glass h2 {
-  font-size: 22px;
-  margin-bottom: 6px;
-}
-
-.loader-glass p {
-  font-size: 14px;
-  opacity: 0.8;
-}
-
-/* Fade-out animation */
-.preloader-hide {
-  animation: fadeOut 0.8s ease forwards;
-}
-
-@keyframes fadeOut {
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .loader-glass {
-    padding: 40px 30px;
-  }
-}
-/* ===== PRELOADER FIX (DESKTOP SAFE) ===== */
-
+/* =====================
+   PRELOADER (FAST & STABLE)
+===================== */
 body.loading {
   overflow: hidden;
 }
 
-/* Hide site until loaded */
 #site-content {
   opacity: 0;
   pointer-events: none;
@@ -253,10 +211,9 @@ body.loading {
 body.loaded #site-content {
   opacity: 1;
   pointer-events: auto;
-  transition: opacity 0.8s ease;
+  transition: opacity 0.3s ease;
 }
 
-/* Preloader visible initially */
 #preloader {
   position: fixed;
   inset: 0;
@@ -267,9 +224,54 @@ body.loaded #site-content {
   justify-content: center;
 }
 
-/* Hide preloader after load */
+.loader-glass {
+  background: rgba(25,25,35,0.45);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border-radius: 28px;
+  padding: 50px 60px;
+  text-align: center;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.7);
+}
+
+.spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top-color: #ff453a;
+  margin: 0 auto 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
 body.loaded #preloader {
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.8s ease;
+  transition: opacity 0.3s ease;
+}
+
+/* =====================
+   MOBILE OPTIMIZATION
+===================== */
+@media (max-width: 768px) {
+  .video-hero {
+    height: 55vh;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .tool,
+  .card {
+    padding: 24px;
+  }
+
+  .loader-glass {
+    padding: 40px 30px;
+  }
 }
