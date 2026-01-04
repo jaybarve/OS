@@ -171,3 +171,70 @@ a {
 a:hover {
   color: #ff1f1f;
 }
+/* ===== PRELOADER ===== */
+
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: radial-gradient(circle at center, #15151c, #050507);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Glass box */
+.loader-glass {
+  background: rgba(25, 25, 35, 0.45);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 28px;
+  padding: 50px 60px;
+  text-align: center;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.7);
+}
+
+/* Spinner */
+.spinner {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 3px solid rgba(255,255,255,0.15);
+  border-top-color: #ff453a; /* red accent */
+  margin: 0 auto 20px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loader-glass h2 {
+  font-size: 22px;
+  margin-bottom: 6px;
+}
+
+.loader-glass p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Fade-out animation */
+.preloader-hide {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .loader-glass {
+    padding: 40px 30px;
+  }
+}
