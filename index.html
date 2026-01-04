@@ -8,7 +8,14 @@
 </head>
 
 <body class="dark">
-
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="loader-glass">
+    <div class="spinner"></div>
+    <h2>OS Tools</h2>
+    <p>Preparing your experience…</p>
+  </div>
+</div>
 <header class="nav">
   <div class="nav-inner glass">
     <div class="logo">OS Tools</div>
@@ -67,6 +74,13 @@
 
   <div class="footer-bottom">© 2026 OS Tools</div>
 </footer>
+<script>
+  window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("preloader").classList.add("preloader-hide");
+    }, 5000); // 5 seconds
+  });
+</script>
 
 </body>
 </html>
