@@ -238,3 +238,38 @@ a:hover {
     padding: 40px 30px;
   }
 }
+/* ===== PRELOADER FIX (DESKTOP SAFE) ===== */
+
+body.loading {
+  overflow: hidden;
+}
+
+/* Hide site until loaded */
+#site-content {
+  opacity: 0;
+  pointer-events: none;
+}
+
+body.loaded #site-content {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.8s ease;
+}
+
+/* Preloader visible initially */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: radial-gradient(circle at center, #15151c, #050507);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Hide preloader after load */
+body.loaded #preloader {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease;
+}
